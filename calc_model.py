@@ -146,6 +146,6 @@ class Area_calc(Singleton):
 
 a = Area_calc()
 b = Area_calc()
-z = a.triangle.
+# z = a.triangle.
 print(a)
 print(b)
