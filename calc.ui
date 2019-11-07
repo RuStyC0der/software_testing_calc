@@ -33,7 +33,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="triangle">
      <property name="enabled">
@@ -161,7 +161,7 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="two_side_angle">
        <widget class="QWidget" name="formLayoutWidget_2">
@@ -1365,7 +1365,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="widget">
+    <widget class="QWidget" name="rectangle">
      <attribute name="title">
       <string>Чотирикутник</string>
      </attribute>
@@ -1375,14 +1375,14 @@
         <x>20</x>
         <y>30</y>
         <width>401</width>
-        <height>231</height>
+        <height>111</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
         <widget class="QRadioButton" name="radioButton_7">
          <property name="text">
-          <string>1 За формулою Герона</string>
+          <string>1 Діагоналі та кут між ними</string>
          </property>
          <property name="checked">
           <bool>true</bool>
@@ -1392,35 +1392,7 @@
        <item>
         <widget class="QRadioButton" name="radioButton_8">
          <property name="text">
-          <string>2 Довжини двох сторін і значення кута між ними</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_9">
-         <property name="text">
-          <string>3 Довжина сторони і опущена на неї висота</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_10">
-         <property name="text">
-          <string>4 Довжини трьох сторін і радіус вписаного кола</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_11">
-         <property name="text">
-          <string>5 Довжини трьох сторін і радіус описаного кола</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_12">
-         <property name="text">
-          <string>6 Довжина одного боку і двох кутів</string>
+          <string>2 Довжини сторін і два протилежних кута</string>
          </property>
         </widget>
        </item>
@@ -1446,41 +1418,2759 @@
        <string>Оберіть варіант обчислення площі чотрикутника, відповідно до відомих данних</string>
       </property>
      </widget>
+     <widget class="QFrame" name="frame_3">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>30</y>
+        <width>281</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_4">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>260</y>
+        <width>141</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_2">
+      <property name="geometry">
+       <rect>
+        <x>-20</x>
+        <y>220</y>
+        <width>801</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QStackedWidget" name="stackedWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>239</y>
+        <width>551</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <widget class="QWidget" name="two_diag_angle">
+       <widget class="QWidget" name="formLayoutWidget_12">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>231</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_11">
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_72">
+           <property name="text">
+            <string>Діагоналі</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_73">
+           <property name="text">
+            <string>a</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="lineEdit_45"/>
+         </item>
+         <item row="2" column="2">
+          <widget class="QComboBox" name="comboBox_17"/>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_46"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_74">
+           <property name="text">
+            <string>b</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QComboBox" name="comboBox_18"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_75">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>40</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Результат</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_11">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>100</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Обчислити</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_47">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>40</y>
+          <width>113</width>
+          <height>28</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_11">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>70</y>
+          <width>158</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_11">
+         <item>
+          <widget class="QLabel" name="label_76">
+           <property name="text">
+            <string>S = </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_48"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_77">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>20</y>
+          <width>57</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Кут</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="two_side_two_angle">
+       <widget class="QWidget" name="formLayoutWidget_13">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>231</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_12">
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_78">
+           <property name="text">
+            <string>сторони</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_79">
+           <property name="text">
+            <string>a</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="lineEdit_49"/>
+         </item>
+         <item row="2" column="2">
+          <widget class="QComboBox" name="comboBox_27"/>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_50"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_80">
+           <property name="text">
+            <string>b</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QComboBox" name="comboBox_28"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="formLayoutWidget_14">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>10</y>
+          <width>111</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_13">
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="lineEdit_51"/>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_52"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_83">
+           <property name="text">
+            <string>B</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_81">
+           <property name="text">
+            <string>Кути</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_82">
+           <property name="text">
+            <string>A</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_87">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>0</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Результат</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_12">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>100</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Обчислити</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_12">
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>30</y>
+          <width>158</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_12">
+         <item>
+          <widget class="QLabel" name="label_88">
+           <property name="text">
+            <string>S = </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_55"/>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_5">
      <attribute name="title">
       <string>Квадрат</string>
      </attribute>
+     <widget class="QFrame" name="frame_5">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>30</y>
+        <width>281</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_6">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>260</y>
+        <width>141</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_65">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>10</y>
+        <width>501</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Оберіть варіант обчислення площі квадрата, відповідно до відомих данних</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_9">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>401</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_9">
+       <item>
+        <widget class="QRadioButton" name="radioButton_21">
+         <property name="text">
+          <string>1 Сторона</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_22">
+         <property name="text">
+          <string>2 Діагональ</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QStackedWidget" name="stackedWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>240</y>
+        <width>551</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <widget class="QWidget" name="two_diag_angle_2">
+       <widget class="QWidget" name="formLayoutWidget_17">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>361</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_17">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_100">
+           <property name="text">
+            <string>Сторона</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QComboBox" name="comboBox_36"/>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lineEdit_63"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_102">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>40</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Результат</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_15">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>100</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Обчислити</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_15">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>70</y>
+          <width>158</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_15">
+         <item>
+          <widget class="QLabel" name="label_103">
+           <property name="text">
+            <string>S = </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_65"/>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="two_side_two_angle_2">
+       <widget class="QPushButton" name="pushButton_16">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>100</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Обчислити</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_16">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>70</y>
+          <width>158</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_16">
+         <item>
+          <widget class="QLabel" name="label_104">
+           <property name="text">
+            <string>S = </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_66"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_105">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>40</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Результат</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="formLayoutWidget_18">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>361</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_18">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_101">
+           <property name="text">
+            <string>Діагональ</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QComboBox" name="comboBox_37"/>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lineEdit_64"/>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_6">
      <attribute name="title">
       <string>Прямокутник</string>
      </attribute>
+     <widget class="QWidget" name="verticalLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>401</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QRadioButton" name="radioButton_9">
+         <property name="text">
+          <string>1 Дві сторони</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QFrame" name="frame_7">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>30</y>
+        <width>281</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_8">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>260</y>
+        <width>141</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_66">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>10</y>
+        <width>501</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Оберіть варіант обчислення площі прямокутника, відповідно до відомих данних</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_3">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>260</y>
+        <width>801</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QStackedWidget" name="stackedWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>249</y>
+        <width>541</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <widget class="QWidget" name="page_3">
+       <widget class="QWidget" name="formLayoutWidget_16">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>231</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_16">
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_94">
+           <property name="text">
+            <string>сторони</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_95">
+           <property name="text">
+            <string>a</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="lineEdit_59"/>
+         </item>
+         <item row="2" column="2">
+          <widget class="QComboBox" name="comboBox_33"/>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_60"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_96">
+           <property name="text">
+            <string>b</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QComboBox" name="comboBox_34"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_97">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>30</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Результат</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_14">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>60</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Обчислити</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_14">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>60</y>
+          <width>158</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_14">
+         <item>
+          <widget class="QLabel" name="label_98">
+           <property name="text">
+            <string>S = </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_61"/>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_4"/>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_7">
      <attribute name="title">
       <string>Паралелограм</string>
      </attribute>
+     <widget class="QWidget" name="verticalLayoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>401</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QRadioButton" name="radioButton_11">
+         <property name="text">
+          <string>1 Дві сторони та кут між ними</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_12">
+         <property name="text">
+          <string>2 Одна сторона та висота</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_23">
+         <property name="text">
+          <string>3 Діагоналі та кут між ними</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QFrame" name="frame_9">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>30</y>
+        <width>281</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_10">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>260</y>
+        <width>141</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_67">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>0</y>
+        <width>501</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Оберіть варіант обчислення площі паралелограма, відповідно до відомих данних</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_4">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>180</y>
+        <width>801</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QStackedWidget" name="stackedWidget_7">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>240</y>
+        <width>551</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="page_5">
+       <widget class="QWidget" name="formLayoutWidget_19">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>231</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_19">
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_99">
+           <property name="text">
+            <string>сторони</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_106">
+           <property name="text">
+            <string>a</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="lineEdit_62"/>
+         </item>
+         <item row="2" column="2">
+          <widget class="QComboBox" name="comboBox_35"/>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_67"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_107">
+           <property name="text">
+            <string>b</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QComboBox" name="comboBox_38"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="pushButton_17">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>80</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Обчислити</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_68">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>20</y>
+          <width>113</width>
+          <height>28</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_17">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>50</y>
+          <width>158</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_17">
+         <item>
+          <widget class="QLabel" name="label_108">
+           <property name="text">
+            <string>S = </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_69"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_109">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>0</y>
+          <width>57</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Кут</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_6">
+       <widget class="QPushButton" name="pushButton_27">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>90</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Обчислити</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="formLayoutWidget_29">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>251</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_29">
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_90"/>
+         </item>
+         <item row="0" column="2">
+          <widget class="QComboBox" name="comboBox_49"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_142">
+           <property name="text">
+            <string>Висота</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lineEdit_91"/>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_141">
+           <property name="text">
+            <string>Сторона</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QComboBox" name="comboBox_48"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_143">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>30</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Результат</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_27">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>60</y>
+          <width>158</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_27">
+         <item>
+          <widget class="QLabel" name="label_144">
+           <property name="text">
+            <string>S = </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_92"/>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_15"/>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_8">
      <attribute name="title">
       <string>Ромб</string>
      </attribute>
+     <widget class="QWidget" name="verticalLayoutWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>401</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QRadioButton" name="radioButton_13">
+         <property name="text">
+          <string>1 Сторона і кут</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_14">
+         <property name="text">
+          <string>2 Сторона і висота</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_24">
+         <property name="text">
+          <string>3 Діагональ</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QFrame" name="frame_11">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>30</y>
+        <width>281</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_12">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>260</y>
+        <width>141</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_68">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>0</y>
+        <width>501</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Оберіть варіант обчислення площі ромба, відповідно до відомих данних</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_5">
+      <property name="geometry">
+       <rect>
+        <x>-20</x>
+        <y>230</y>
+        <width>801</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QStackedWidget" name="stackedWidget_8">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>239</y>
+        <width>541</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="page_7">
+       <widget class="QWidget" name="formLayoutWidget_20">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>231</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_20">
+         <item row="1" column="2">
+          <widget class="QComboBox" name="comboBox_40"/>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_110">
+           <property name="text">
+            <string>сторони</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_111">
+           <property name="text">
+            <string>a</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_71"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="pushButton_18">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>80</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Обчислити</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_72">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>20</y>
+          <width>113</width>
+          <height>28</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_18">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>50</y>
+          <width>158</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_18">
+         <item>
+          <widget class="QLabel" name="label_113">
+           <property name="text">
+            <string>S = </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_73"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_114">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>0</y>
+          <width>57</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Кут</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_8">
+       <widget class="QWidget" name="formLayoutWidget_21">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>10</y>
+          <width>231</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_21">
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_74"/>
+         </item>
+         <item row="1" column="2">
+          <widget class="QComboBox" name="comboBox_41"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_115">
+           <property name="text">
+            <string>a</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_112">
+           <property name="text">
+            <string>сторонa</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="pushButton_19">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>90</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Обчислити</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_75">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>30</y>
+          <width>113</width>
+          <height>28</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_19">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>60</y>
+          <width>158</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_19">
+         <item>
+          <widget class="QLabel" name="label_117">
+           <property name="text">
+            <string>S = </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_76"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_118">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>10</y>
+          <width>57</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Висота</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_9">
+       <widget class="QStackedWidget" name="stackedWidget_9">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>551</width>
+          <height>141</height>
+         </rect>
+        </property>
+        <property name="currentIndex">
+         <number>2</number>
+        </property>
+        <widget class="QWidget" name="two_diag_angle_3">
+         <widget class="QWidget" name="formLayoutWidget_22">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>361</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_22">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_116">
+             <property name="text">
+              <string>Сторона</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QComboBox" name="comboBox_39"/>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEdit_70"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QLabel" name="label_119">
+          <property name="geometry">
+           <rect>
+            <x>430</x>
+            <y>40</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Результат</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_20">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>100</y>
+            <width>93</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Обчислити</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="horizontalLayoutWidget_20">
+          <property name="geometry">
+           <rect>
+            <x>380</x>
+            <y>70</y>
+            <width>158</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_20">
+           <item>
+            <widget class="QLabel" name="label_120">
+             <property name="text">
+              <string>S = </string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_77"/>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_13">
+         <widget class="QWidget" name="formLayoutWidget_88">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>251</width>
+            <height>121</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_87">
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="lineEdit_270"/>
+           </item>
+           <item row="0" column="2">
+            <widget class="QComboBox" name="comboBox_146"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_422">
+             <property name="text">
+              <string>Висота</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEdit_271"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_423">
+             <property name="text">
+              <string>Сторона</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QComboBox" name="comboBox_147"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="horizontalLayoutWidget_82">
+          <property name="geometry">
+           <rect>
+            <x>380</x>
+            <y>60</y>
+            <width>158</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_83">
+           <item>
+            <widget class="QLabel" name="label_424">
+             <property name="text">
+              <string>S = </string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_272"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QLabel" name="label_425">
+          <property name="geometry">
+           <rect>
+            <x>430</x>
+            <y>30</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Результат</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_82">
+          <property name="geometry">
+           <rect>
+            <x>260</x>
+            <y>90</y>
+            <width>93</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Обчислити</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="two_side_two_angle_3">
+         <widget class="QPushButton" name="pushButton_21">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>100</y>
+            <width>93</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Обчислити</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="horizontalLayoutWidget_21">
+          <property name="geometry">
+           <rect>
+            <x>380</x>
+            <y>70</y>
+            <width>158</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_21">
+           <item>
+            <widget class="QLabel" name="label_121">
+             <property name="text">
+              <string>S = </string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_78"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QLabel" name="label_122">
+          <property name="geometry">
+           <rect>
+            <x>430</x>
+            <y>40</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Результат</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="formLayoutWidget_23">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>361</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_23">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_123">
+             <property name="text">
+              <string>Діагональ</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QComboBox" name="comboBox_42"/>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEdit_79"/>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_9">
      <attribute name="title">
       <string>Трапеція</string>
      </attribute>
+     <widget class="QWidget" name="verticalLayoutWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>401</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QRadioButton" name="radioButton_15">
+         <property name="text">
+          <string>1 Основа і висота</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_16">
+         <property name="text">
+          <string>2 Середня лінія і висота</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_25">
+         <property name="text">
+          <string>3 Діагоналі та кут між ними</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QFrame" name="frame_13">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>30</y>
+        <width>281</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_14">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>260</y>
+        <width>141</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_69">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>0</y>
+        <width>501</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Оберіть варіант обчислення площі трапеції, відповідно до відомих данних</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_6">
+      <property name="geometry">
+       <rect>
+        <x>-30</x>
+        <y>230</y>
+        <width>801</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QStackedWidget" name="stackedWidget_37">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>230</y>
+        <width>551</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="page_46">
+       <widget class="QWidget" name="formLayoutWidget_89">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>251</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_88">
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_273"/>
+         </item>
+         <item row="0" column="2">
+          <widget class="QComboBox" name="comboBox_148"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_426">
+           <property name="text">
+            <string>Висота</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lineEdit_274"/>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_427">
+           <property name="text">
+            <string>Основа</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QComboBox" name="comboBox_149"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_83">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>80</y>
+          <width>158</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_84">
+         <item>
+          <widget class="QLabel" name="label_428">
+           <property name="text">
+            <string>S = </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_275"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_429">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>50</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Результат</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_83">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>110</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Обчислити</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_47">
+       <widget class="QWidget" name="formLayoutWidget_90">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>251</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_89">
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_276"/>
+         </item>
+         <item row="0" column="2">
+          <widget class="QComboBox" name="comboBox_150"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_430">
+           <property name="text">
+            <string>Висота</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="lineEdit_277"/>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_431">
+           <property name="text">
+            <string>Сер. лінія</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QComboBox" name="comboBox_151"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_84">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>70</y>
+          <width>158</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_85">
+         <item>
+          <widget class="QLabel" name="label_432">
+           <property name="text">
+            <string>S = </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_278"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_433">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>40</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Результат</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_84">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>100</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Обчислити</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_48">
+       <widget class="QPushButton" name="pushButton_85">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>100</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Обчислити</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_434">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>20</y>
+          <width>57</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Кут</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="formLayoutWidget_91">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>231</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_90">
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_435">
+           <property name="text">
+            <string>Діагоналі</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_436">
+           <property name="text">
+            <string>a</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="lineEdit_279"/>
+         </item>
+         <item row="2" column="2">
+          <widget class="QComboBox" name="comboBox_152"/>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_280"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_437">
+           <property name="text">
+            <string>b</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QComboBox" name="comboBox_153"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_438">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>40</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Результат</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_85">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>70</y>
+          <width>158</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_86">
+         <item>
+          <widget class="QLabel" name="label_439">
+           <property name="text">
+            <string>S = </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_281"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_282">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>40</y>
+          <width>113</width>
+          <height>28</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab">
      <attribute name="title">
       <string>Круг</string>
      </attribute>
+     <widget class="QWidget" name="verticalLayoutWidget_7">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>401</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <widget class="QRadioButton" name="radioButton_17">
+         <property name="text">
+          <string>1 Радіус</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_18">
+         <property name="text">
+          <string>2 Діаметер</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_26">
+         <property name="text">
+          <string>3 Довжина</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QFrame" name="frame_15">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>30</y>
+        <width>281</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_16">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>260</y>
+        <width>141</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_70">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>0</y>
+        <width>501</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Оберіть варіант обчислення площі круга, відповідно до відомих данних</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_7">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>260</y>
+        <width>801</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QStackedWidget" name="stackedWidget_10">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>240</y>
+        <width>541</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <widget class="QWidget" name="page_10">
+       <widget class="QStackedWidget" name="stackedWidget_11">
+        <property name="geometry">
+         <rect>
+          <x>-10</x>
+          <y>0</y>
+          <width>551</width>
+          <height>141</height>
+         </rect>
+        </property>
+        <property name="currentIndex">
+         <number>2</number>
+        </property>
+        <widget class="QWidget" name="two_diag_angle_4">
+         <widget class="QWidget" name="formLayoutWidget_24">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>361</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_24">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_124">
+             <property name="text">
+              <string>Радіус</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QComboBox" name="comboBox_43"/>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEdit_80"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QLabel" name="label_125">
+          <property name="geometry">
+           <rect>
+            <x>430</x>
+            <y>40</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Результат</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_22">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>100</y>
+            <width>93</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Обчислити</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="horizontalLayoutWidget_22">
+          <property name="geometry">
+           <rect>
+            <x>380</x>
+            <y>70</y>
+            <width>158</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_22">
+           <item>
+            <widget class="QLabel" name="label_126">
+             <property name="text">
+              <string>S = </string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_81"/>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="two_side_two_angle_4">
+         <widget class="QPushButton" name="pushButton_23">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>100</y>
+            <width>93</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Обчислити</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="horizontalLayoutWidget_23">
+          <property name="geometry">
+           <rect>
+            <x>380</x>
+            <y>70</y>
+            <width>158</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_23">
+           <item>
+            <widget class="QLabel" name="label_127">
+             <property name="text">
+              <string>S = </string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_82"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QLabel" name="label_128">
+          <property name="geometry">
+           <rect>
+            <x>430</x>
+            <y>40</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Результат</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="formLayoutWidget_25">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>361</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_25">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_129">
+             <property name="text">
+              <string>Діаметер</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QComboBox" name="comboBox_44"/>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEdit_83"/>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_12">
+         <widget class="QStackedWidget" name="stackedWidget_12">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>551</width>
+            <height>141</height>
+           </rect>
+          </property>
+          <property name="currentIndex">
+           <number>2</number>
+          </property>
+          <widget class="QWidget" name="two_diag_angle_5">
+           <widget class="QWidget" name="formLayoutWidget_26">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>20</y>
+              <width>361</width>
+              <height>61</height>
+             </rect>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_26">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_130">
+               <property name="text">
+                <string>Радіус</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QComboBox" name="comboBox_45"/>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="lineEdit_84"/>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QLabel" name="label_131">
+            <property name="geometry">
+             <rect>
+              <x>430</x>
+              <y>40</y>
+              <width>71</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Результат</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_24">
+            <property name="geometry">
+             <rect>
+              <x>130</x>
+              <y>100</y>
+              <width>93</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Обчислити</string>
+            </property>
+           </widget>
+           <widget class="QWidget" name="horizontalLayoutWidget_24">
+            <property name="geometry">
+             <rect>
+              <x>380</x>
+              <y>70</y>
+              <width>158</width>
+              <height>61</height>
+             </rect>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_24">
+             <item>
+              <widget class="QLabel" name="label_132">
+               <property name="text">
+                <string>S = </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_85"/>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="two_side_two_angle_5">
+           <widget class="QPushButton" name="pushButton_25">
+            <property name="geometry">
+             <rect>
+              <x>130</x>
+              <y>100</y>
+              <width>93</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Обчислити</string>
+            </property>
+           </widget>
+           <widget class="QWidget" name="horizontalLayoutWidget_25">
+            <property name="geometry">
+             <rect>
+              <x>380</x>
+              <y>70</y>
+              <width>158</width>
+              <height>61</height>
+             </rect>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_25">
+             <item>
+              <widget class="QLabel" name="label_133">
+               <property name="text">
+                <string>S = </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_86"/>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QLabel" name="label_134">
+            <property name="geometry">
+             <rect>
+              <x>430</x>
+              <y>40</y>
+              <width>71</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Результат</string>
+            </property>
+           </widget>
+           <widget class="QWidget" name="formLayoutWidget_27">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>20</y>
+              <width>361</width>
+              <height>61</height>
+             </rect>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_27">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_135">
+               <property name="text">
+                <string>Діаметер</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QComboBox" name="comboBox_46"/>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="lineEdit_87"/>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="page_14">
+           <widget class="QWidget" name="horizontalLayoutWidget_26">
+            <property name="geometry">
+             <rect>
+              <x>390</x>
+              <y>60</y>
+              <width>158</width>
+              <height>61</height>
+             </rect>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_26">
+             <item>
+              <widget class="QLabel" name="label_136">
+               <property name="text">
+                <string>S = </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_88"/>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QPushButton" name="pushButton_26">
+            <property name="geometry">
+             <rect>
+              <x>140</x>
+              <y>90</y>
+              <width>93</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Обчислити</string>
+            </property>
+           </widget>
+           <widget class="QWidget" name="formLayoutWidget_28">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>10</y>
+              <width>361</width>
+              <height>61</height>
+             </rect>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_28">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_137">
+               <property name="text">
+                <string>Довжина</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QComboBox" name="comboBox_47"/>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="lineEdit_89"/>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QLabel" name="label_138">
+            <property name="geometry">
+             <rect>
+              <x>440</x>
+              <y>30</y>
+              <width>71</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Результат</string>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_11"/>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
       <string>Еліпс</string>
      </attribute>
+     <widget class="QWidget" name="verticalLayoutWidget_8">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>401</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_8">
+       <item>
+        <widget class="QRadioButton" name="radioButton_19">
+         <property name="text">
+          <string>1 Більша та менша півось</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QFrame" name="frame_17">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>30</y>
+        <width>281</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_18">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>260</y>
+        <width>141</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_71">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>10</y>
+        <width>501</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Оберіть варіант обчислення площі еліпса, відповідно до відомих данних</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line_8">
+      <property name="geometry">
+       <rect>
+        <x>-30</x>
+        <y>230</y>
+        <width>801</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QStackedWidget" name="stackedWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>260</y>
+        <width>551</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <widget class="QWidget" name="page">
+       <widget class="QWidget" name="formLayoutWidget_15">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>231</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_15">
+         <item row="0" column="1">
+          <widget class="QLabel" name="label_89">
+           <property name="text">
+            <string>Півосі</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_90">
+           <property name="text">
+            <string>більша</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="lineEdit_56"/>
+         </item>
+         <item row="2" column="2">
+          <widget class="QComboBox" name="comboBox_31"/>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="lineEdit_57"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_91">
+           <property name="text">
+            <string>менша</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QComboBox" name="comboBox_32"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_92">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>20</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Результат</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_13">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>50</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Обчислити</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_13">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>50</y>
+          <width>158</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_13">
+         <item>
+          <widget class="QLabel" name="label_93">
+           <property name="text">
+            <string>S = </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_58"/>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_2"/>
+     </widget>
     </widget>
    </widget>
   </widget>
