@@ -125,7 +125,7 @@
         <x>450</x>
         <y>40</y>
         <width>281</width>
-        <height>211</height>
+        <height>191</height>
        </rect>
       </property>
       <property name="frameShape">
@@ -133,19 +133,6 @@
       </property>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
-      </property>
-     </widget>
-     <widget class="Line" name="line">
-      <property name="geometry">
-       <rect>
-        <x>-20</x>
-        <y>270</y>
-        <width>801</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
       </property>
      </widget>
      <widget class="QFrame" name="frame_2">
@@ -168,13 +155,13 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>260</y>
+        <y>250</y>
         <width>581</width>
         <height>121</height>
        </rect>
       </property>
       <property name="currentIndex">
-       <number>5</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="two_side_angle">
        <widget class="QWidget" name="formLayoutWidget_2">
@@ -250,7 +237,7 @@
          <rect>
           <x>450</x>
           <y>20</y>
-          <width>61</width>
+          <width>71</width>
           <height>16</height>
          </rect>
         </property>
@@ -353,29 +340,6 @@
          </item>
         </layout>
        </widget>
-       <widget class="QLabel" name="label_3">
-        <property name="geometry">
-         <rect>
-          <x>290</x>
-          <y>0</y>
-          <width>57</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Кут</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_20">
-        <property name="geometry">
-         <rect>
-          <x>260</x>
-          <y>20</y>
-          <width>113</width>
-          <height>28</height>
-         </rect>
-        </property>
-       </widget>
        <widget class="QPushButton" name="pushButton">
         <property name="geometry">
          <rect>
@@ -416,7 +380,7 @@
          <rect>
           <x>440</x>
           <y>20</y>
-          <width>61</width>
+          <width>81</width>
           <height>16</height>
          </rect>
         </property>
@@ -491,12 +455,12 @@
          <rect>
           <x>440</x>
           <y>20</y>
-          <width>61</width>
+          <width>81</width>
           <height>16</height>
          </rect>
         </property>
         <property name="text">
-         <string>Висота</string>
+         <string>Результат</string>
         </property>
        </widget>
        <widget class="QPushButton" name="pushButton_3">
@@ -609,7 +573,7 @@
          <rect>
           <x>450</x>
           <y>20</y>
-          <width>61</width>
+          <width>71</width>
           <height>16</height>
          </rect>
         </property>
@@ -682,7 +646,7 @@
          <rect>
           <x>450</x>
           <y>20</y>
-          <width>61</width>
+          <width>71</width>
           <height>16</height>
          </rect>
         </property>
@@ -992,7 +956,7 @@
            <rect>
             <x>440</x>
             <y>20</y>
-            <width>61</width>
+            <width>71</width>
             <height>16</height>
            </rect>
           </property>
@@ -1387,12 +1351,19 @@
        </widget>
       </widget>
      </widget>
-     <zorder>verticalLayoutWidget</zorder>
-     <zorder>label</zorder>
-     <zorder>frame</zorder>
-     <zorder>frame_2</zorder>
-     <zorder>line</zorder>
-     <zorder>stackedWidget</zorder>
+     <widget class="Line" name="line">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>230</y>
+        <width>801</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="widget">
      <attribute name="title">

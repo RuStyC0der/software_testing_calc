@@ -3,7 +3,7 @@
 # from PyQt5.QtGui import QTextDocument
 # import PyQt5.QtGui
 from PyQt5.QtWidgets import *
-from PyQt5 import uic
+from PyQt5 import uic, QtGui
 
 import calc_model
 
@@ -14,14 +14,18 @@ class triangle(QMainWindow):
         self.ui = uic.loadUi("calc.ui", self)
         self.button_group =QButtonGroup()
         self.button_group.addButton(self.ui.radioButton)
+        self.button_group.addButton(self.ui.radioButton_2)
         self.button_group.addButton(self.ui.radioButton_3)
-        self.button_group.addButton(self.ui.radioButton_6)
         self.button_group.addButton(self.ui.radioButton_4)
         self.button_group.addButton(self.ui.radioButton_5)
-        self.button_group.addButton(self.ui.radioButton_2)
+        self.button_group.addButton(self.ui.radioButton_6)
 
         self.a = calc_model.Area_calc()
+
         self.setFixedSize(self.size())
+        self.ui.stackedWidget.setCurrentIndex(1)
+        self.setWindowIcon(QtGui.QIcon('./media/window_icon.png'))
+
         self.button_group.buttonClicked.connect(self.radioB)
         self.ui.pushButton.clicked.connect(self.but)
 
@@ -68,15 +72,15 @@ class triangle(QMainWindow):
         if self.typeR == "1":
             self.ui.stackedWidget.setCurrentIndex(1)
         elif self.typeR == "2":
-            self.ui.stackedWidget.setCurrentIndex(2)
+            self.ui.stackedWidget.setCurrentIndex(0)
         elif self.typeR == "3":
-            self.ui.stackedWidget.setCurrentIndex(3)
+            self.ui.stackedWidget.setCurrentIndex(2)
         elif self.typeR == "4":
-            self.ui.stackedWidget.setCurrentIndex(4)
+            self.ui.stackedWidget.setCurrentIndex(3)
         elif self.typeR == "5":
-            self.ui.stackedWidget.setCurrentIndex(5)
+            self.ui.stackedWidget.setCurrentIndex(4)
         elif self.typeR == "6":
-            self.ui.stackedWidget.setCurrentIndex(6)
+            self.ui.stackedWidget.setCurrentIndex(5)
       
 
 if __name__ == '__main__':
@@ -86,6 +90,3 @@ if __name__ == '__main__':
     w.show()
 
     app.exec()
-
-#self.label.setText('Current: ' + button.text())
-        
