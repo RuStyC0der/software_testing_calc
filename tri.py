@@ -1,16 +1,17 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QFileDialog
-from PyQt5 import QtPrintSupport, QtWidgets
-from PyQt5.QtGui import QTextDocument
-import PyQt5.QtGui
+# from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QFileDialog
+# # from PyQt5 import QtPrintSupport, QtWidgets
+# from PyQt5.QtGui import QTextDocument
+# import PyQt5.QtGui
 from PyQt5.QtWidgets import *
-import calc_model 
-
 from PyQt5 import uic
+
+import calc_model
+
 
 class triangle(QMainWindow):
     def __init__(self):        
         super(triangle, self).__init__()
-        self.ui =uic.loadUi("calc.ui", self)
+        self.ui = uic.loadUi("calc.ui", self)
         self.button_group =QButtonGroup()
         self.button_group.addButton(self.ui.radioButton)
         self.button_group.addButton(self.ui.radioButton_3)
@@ -18,18 +19,13 @@ class triangle(QMainWindow):
         self.button_group.addButton(self.ui.radioButton_4)
         self.button_group.addButton(self.ui.radioButton_5)
         self.button_group.addButton(self.ui.radioButton_2)
-        
 
         self.a = calc_model.Area_calc()
-        
-
+        self.setFixedSize(self.size())
         self.button_group.buttonClicked.connect(self.radioB)
         self.ui.pushButton.clicked.connect(self.but)
 
     def but(self):
-        
-        
-
         if self.typeR == "1":
             a = int(self.ui.lineEdit.text())
             b = int(self.ui.lineEdit_2.text())
@@ -61,14 +57,10 @@ class triangle(QMainWindow):
             b = int(self.ui.lineEdit_18.text())
             c = int(self.ui.lineEdit_19.text())    
             res = self.a.triangle.one_side_two_angle(a,b,c)
-            
 
         self.ui.label_3.setText(str(res))
-        
-        
-
-        
         print(res)
+
 
     def radioB(self, button):
         

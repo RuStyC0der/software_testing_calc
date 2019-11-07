@@ -144,8 +144,10 @@ class Area_calc(Singleton):
         self.ellipse = Ellipse_area()
 
 
-a = Area_calc()
-b = Area_calc()
-# z = a.triangle.
-print(a)
-print(b)
+
+if __name__ == '__main__':
+    a = Area_calc()
+    b = Area_calc()
+    # z = a.triangle.
+    print(a)
+    print(b)
