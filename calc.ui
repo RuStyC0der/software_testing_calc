@@ -32,8 +32,11 @@
       <height>484</height>
      </rect>
     </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
+    </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="triangle">
      <property name="enabled">
@@ -219,19 +222,6 @@
          </rect>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="geometry">
-         <rect>
-          <x>280</x>
-          <y>80</y>
-          <width>93</width>
-          <height>28</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Обчислити</string>
-        </property>
-       </widget>
        <widget class="QLabel" name="label_35">
         <property name="geometry">
          <rect>
@@ -279,6 +269,19 @@
           <widget class="QLineEdit" name="lineEdit_26"/>
          </item>
         </layout>
+       </widget>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>80</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Обчислити</string>
+        </property>
        </widget>
       </widget>
       <widget class="QWidget" name="page_geron">
