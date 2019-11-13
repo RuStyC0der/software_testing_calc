@@ -23,7 +23,8 @@ class triangle(QMainWindow):
         self.setWindowIcon(QtGui.QIcon('./media/window_icon.png'))
 
         self._triangle_button_group.buttonClicked.connect(self.triangle_swich_menus)
-        self.ui.pushButton.clicked.connect(self.but)
+        self.ui.pushButton_2.clicked.connect(self.but)
+        self.typeR = "1"
 
     def but(self):
         if self.typeR == "1":
@@ -58,12 +59,13 @@ class triangle(QMainWindow):
             c = int(self.ui.lineEdit_19.text())    
             res = self.model.triangle.one_side_two_angle(a,b,c)
 
-        self.ui.label_3.setText(str(res))
+        self.ui.lineEdit_21.setText(str(res))
         print(res)
 
     def triangle_swich_menus(self, button):
         matchicg_dict = {"1":1, "2":0, "3":2, "4":3, "5":4, "6":5}
-        self.ui.stackedWidget.setCurrentIndex(matchicg_dict[button.text()[0]])
+        self.typeR = button.text()[0]
+        self.ui.stackedWidget.setCurrentIndex(matchicg_dict[self.typeR])
 
 
 if __name__ == '__main__':
