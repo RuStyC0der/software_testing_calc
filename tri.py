@@ -94,6 +94,8 @@ class triangle(QMainWindow):
 
         self.model = calc_model.Area_calc()
         self.setWindowIcon(QtGui.QIcon('./media/window_icon.png'))
+        self.movie = QtGui.QMovie("./media/firework.gif")
+        self.ui.label_55.setMovie(self.movie)
 
         self.setFixedSize(self.size())
         self.ui.stackedWidget.setCurrentIndex(1)
@@ -137,14 +139,17 @@ class triangle(QMainWindow):
                 b = float(self.ui.lineEdit_18.text().replace(",", "."))
                 c = float(self.ui.lineEdit_19.text().replace(",", "."))
                 res = self.model.triangle.one_side_two_angle(a,b,c)
+
         except ValueError:
             print("error")
             return
 
         self.ui.lineEdit_26.setText(str(res))
+        self.movie.start()
         print(res)
 
     def triangle_swich_menus(self, button):
+        self.movie.stop()
         matchicg_dict = {"1":1, "2":0, "3":2, "4":3, "5":4, "6":5}
         path_dict = {"1":"./media/phigures/triangle/Герон.jpg", "2":"./media/phigures/triangle/довжини двох сторін і кут між ними.png", "3":"./media/phigures/triangle/довжина сторони  і опущена висота.png", "4":"./media/phigures/triangle/довжина трьох сторін  і радіус вписаного кола.png", "5":"./media/phigures/triangle/довжина трьох сторін  і радіус описаного кола.png", "6":"./media/phigures/triangle/довжина одного боку  і двох кутыв.png"}
         self.typeR = button.text()[0]

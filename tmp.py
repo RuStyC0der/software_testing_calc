@@ -7,4 +7,5 @@ if __name__ == '__main__':
     #     z = set(z)
     #     for i in z:
     #         print("self.ui.", i, ".", "setValidator(self.validator)", sep="")
-    print(os.listdir())
+    for i in range(10000):
+        print(i)
