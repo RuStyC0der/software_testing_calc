@@ -19,6 +19,8 @@ class triangle(QMainWindow):
         self._triangle_button_group.addButton(self.ui.radioButton_5)
         self._triangle_button_group.addButton(self.ui.radioButton_6)
 
+
+
         self._triangle_button_group.buttonClicked.connect(self.triangle_swich_menus)
         self.ui.pushButton_2.clicked.connect(self.calculate_triangle)
 
@@ -248,35 +250,35 @@ class triangle(QMainWindow):
     def calculate_triangle(self):
         try:
             if self.typeR == "1":
-                a = float(self.ui.lineEdit.text().replace(",", "."))
-                b = float(self.ui.lineEdit_2.text().replace(",", "."))
-                c = float(self.ui.lineEdit_3.text().replace(",", "."))
+                a = float(self.ui.lineEdit.text().replace(",", ".")) * self.ui.comboBox.currentData()
+                b = float(self.ui.lineEdit_2.text().replace(",", ".")) * self.ui.comboBox_2.currentData()
+                c = float(self.ui.lineEdit_3.text().replace(",", ".")) * self.ui.comboBox_3.currentData()
                 res = self.model.triangle.geron(a,b,c)
             elif self.typeR == "2":
-                a = float(self.ui.lineEdit_4.text().replace(",", "."))
-                b = float(self.ui.lineEdit_5.text().replace(",", "."))
-                c = float(self.ui.lineEdit_6.text().replace(",", "."))
+                a = float(self.ui.lineEdit_4.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_5.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_6.text().replace(",", ".")) * self.ui.cdf.currentData()
                 res = self.model.triangle.two_side_one_angle(a,b,c)
             elif self.typeR == "3":
-                a = float(self.ui.lineEdit_7.text().replace(",", "."))
-                b = float(self.ui.lineEdit_8.text().replace(",", "."))
+                a = float(self.ui.lineEdit_7.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_8.text().replace(",", ".")) * self.ui.cdf.currentData()
                 res = self.model.triangle.side_height(a,b)
             elif self.typeR == "4":
-                a = float(self.ui.lineEdit_9.text().replace(",", "."))
-                b = float(self.ui.lineEdit_10.text().replace(",", "."))
-                c = float(self.ui.lineEdit_11.text().replace(",", "."))
-                d = float(self.ui.lineEdit_12.text().replace(",", "."))
+                a = float(self.ui.lineEdit_9.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_10.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_11.text().replace(",", ".")) * self.ui.cdf.currentData()
+                d = float(self.ui.lineEdit_12.text().replace(",", ".")) * self.ui.cdf.currentData()
                 res = self.model.triangle.thre_side_described_circle(a,b,c,d)
             elif self.typeR == "5":
-                a = float(self.ui.lineEdit_13.text().replace(",", "."))
-                b = float(self.ui.lineEdit_14.text().replace(",", "."))
-                c = float(self.ui.lineEdit_15.text().replace(",", "."))
-                d = float(self.ui.lineEdit_16.text().replace(",", "."))
+                a = float(self.ui.lineEdit_13.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_14.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_15.text().replace(",", ".")) * self.ui.cdf.currentData()
+                d = float(self.ui.lineEdit_16.text().replace(",", ".")) * self.ui.cdf.currentData()
                 res = self.model.triangle.tree_side_inscribed_circle(a,b,c,d)
             elif self.typeR == "6":
-                a = float(self.ui.lineEdit_17.text().replace(",", "."))
-                b = float(self.ui.lineEdit_18.text().replace(",", "."))
-                c = float(self.ui.lineEdit_19.text().replace(",", "."))
+                a = float(self.ui.lineEdit_17.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_18.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_19.text().replace(",", ".")) * self.ui.cdf.currentData()
                 res = self.model.triangle.one_side_two_angle(a,b,c)
 
         except ValueError:
@@ -287,14 +289,471 @@ class triangle(QMainWindow):
         self.movie.start()
         print(res)
 
+    def calculate_quadrangle(self):
+        try:
+            if self.typeR == "1":
+                a = float(self.ui.lineEdit.text().replace(",", ".")) * self.ui.comboBox.currentData()
+                b = float(self.ui.lineEdit_2.text().replace(",", ".")) * self.ui.comboBox_2.currentData()
+                c = float(self.ui.lineEdit_3.text().replace(",", ".")) * self.ui.comboBox_3.currentData()
+                res = self.model.triangle.geron(a,b,c)
+            elif self.typeR == "2":
+                a = float(self.ui.lineEdit_4.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_5.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_6.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.two_side_one_angle(a,b,c)
+            elif self.typeR == "3":
+                a = float(self.ui.lineEdit_7.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_8.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.side_height(a,b)
+            elif self.typeR == "4":
+                a = float(self.ui.lineEdit_9.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_10.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_11.text().replace(",", ".")) * self.ui.cdf.currentData()
+                d = float(self.ui.lineEdit_12.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.thre_side_described_circle(a,b,c,d)
+            elif self.typeR == "5":
+                a = float(self.ui.lineEdit_13.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_14.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_15.text().replace(",", ".")) * self.ui.cdf.currentData()
+                d = float(self.ui.lineEdit_16.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.tree_side_inscribed_circle(a,b,c,d)
+            elif self.typeR == "6":
+                a = float(self.ui.lineEdit_17.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_18.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_19.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.one_side_two_angle(a,b,c)
+
+        except ValueError:
+            print("error")
+            return
+
+        self.ui.lineEdit_26.setText(str(res))
+        self.movie.start()
+        print(res)
+
+    def calculate_square(self):
+        try:
+            if self.typeR == "1":
+                a = float(self.ui.lineEdit.text().replace(",", ".")) * self.ui.comboBox.currentData()
+                b = float(self.ui.lineEdit_2.text().replace(",", ".")) * self.ui.comboBox_2.currentData()
+                c = float(self.ui.lineEdit_3.text().replace(",", ".")) * self.ui.comboBox_3.currentData()
+                res = self.model.triangle.geron(a,b,c)
+            elif self.typeR == "2":
+                a = float(self.ui.lineEdit_4.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_5.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_6.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.two_side_one_angle(a,b,c)
+            elif self.typeR == "3":
+                a = float(self.ui.lineEdit_7.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_8.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.side_height(a,b)
+            elif self.typeR == "4":
+                a = float(self.ui.lineEdit_9.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_10.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_11.text().replace(",", ".")) * self.ui.cdf.currentData()
+                d = float(self.ui.lineEdit_12.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.thre_side_described_circle(a,b,c,d)
+            elif self.typeR == "5":
+                a = float(self.ui.lineEdit_13.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_14.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_15.text().replace(",", ".")) * self.ui.cdf.currentData()
+                d = float(self.ui.lineEdit_16.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.tree_side_inscribed_circle(a,b,c,d)
+            elif self.typeR == "6":
+                a = float(self.ui.lineEdit_17.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_18.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_19.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.one_side_two_angle(a,b,c)
+
+        except ValueError:
+            print("error")
+            return
+
+        self.ui.lineEdit_26.setText(str(res))
+        self.movie.start()
+        print(res)
+
+    def calculate_rectangle(self):
+        try:
+            if self.typeR == "1":
+                a = float(self.ui.lineEdit.text().replace(",", ".")) * self.ui.comboBox.currentData()
+                b = float(self.ui.lineEdit_2.text().replace(",", ".")) * self.ui.comboBox_2.currentData()
+                c = float(self.ui.lineEdit_3.text().replace(",", ".")) * self.ui.comboBox_3.currentData()
+                res = self.model.triangle.geron(a,b,c)
+            elif self.typeR == "2":
+                a = float(self.ui.lineEdit_4.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_5.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_6.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.two_side_one_angle(a,b,c)
+            elif self.typeR == "3":
+                a = float(self.ui.lineEdit_7.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_8.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.side_height(a,b)
+            elif self.typeR == "4":
+                a = float(self.ui.lineEdit_9.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_10.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_11.text().replace(",", ".")) * self.ui.cdf.currentData()
+                d = float(self.ui.lineEdit_12.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.thre_side_described_circle(a,b,c,d)
+            elif self.typeR == "5":
+                a = float(self.ui.lineEdit_13.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_14.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_15.text().replace(",", ".")) * self.ui.cdf.currentData()
+                d = float(self.ui.lineEdit_16.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.tree_side_inscribed_circle(a,b,c,d)
+            elif self.typeR == "6":
+                a = float(self.ui.lineEdit_17.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_18.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_19.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.one_side_two_angle(a,b,c)
+
+        except ValueError:
+            print("error")
+            return
+
+        self.ui.lineEdit_26.setText(str(res))
+        self.movie.start()
+        print(res)
+
+    def calculate_paralelogram(self):
+        try:
+            if self.typeR == "1":
+                a = float(self.ui.lineEdit.text().replace(",", ".")) * self.ui.comboBox.currentData()
+                b = float(self.ui.lineEdit_2.text().replace(",", ".")) * self.ui.comboBox_2.currentData()
+                c = float(self.ui.lineEdit_3.text().replace(",", ".")) * self.ui.comboBox_3.currentData()
+                res = self.model.triangle.geron(a, b, c)
+            elif self.typeR == "2":
+                a = float(self.ui.lineEdit_4.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_5.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_6.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.two_side_one_angle(a, b, c)
+            elif self.typeR == "3":
+                a = float(self.ui.lineEdit_7.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_8.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.side_height(a, b)
+            elif self.typeR == "4":
+                a = float(self.ui.lineEdit_9.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_10.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_11.text().replace(",", ".")) * self.ui.cdf.currentData()
+                d = float(self.ui.lineEdit_12.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.thre_side_described_circle(a, b, c, d)
+            elif self.typeR == "5":
+                a = float(self.ui.lineEdit_13.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_14.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_15.text().replace(",", ".")) * self.ui.cdf.currentData()
+                d = float(self.ui.lineEdit_16.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.tree_side_inscribed_circle(a, b, c, d)
+            elif self.typeR == "6":
+                a = float(self.ui.lineEdit_17.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_18.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_19.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.one_side_two_angle(a, b, c)
+
+        except ValueError:
+            print("error")
+            return
+
+        self.ui.lineEdit_26.setText(str(res))
+        self.movie.start()
+        print(res)
+
+    def calculate_diamond(self):
+        try:
+            if self.typeR == "1":
+                a = float(self.ui.lineEdit.text().replace(",", ".")) * self.ui.comboBox.currentData()
+                b = float(self.ui.lineEdit_2.text().replace(",", ".")) * self.ui.comboBox_2.currentData()
+                c = float(self.ui.lineEdit_3.text().replace(",", ".")) * self.ui.comboBox_3.currentData()
+                res = self.model.triangle.geron(a, b, c)
+            elif self.typeR == "2":
+                a = float(self.ui.lineEdit_4.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_5.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_6.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.two_side_one_angle(a, b, c)
+            elif self.typeR == "3":
+                a = float(self.ui.lineEdit_7.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_8.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.side_height(a, b)
+            elif self.typeR == "4":
+                a = float(self.ui.lineEdit_9.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_10.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_11.text().replace(",", ".")) * self.ui.cdf.currentData()
+                d = float(self.ui.lineEdit_12.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.thre_side_described_circle(a, b, c, d)
+            elif self.typeR == "5":
+                a = float(self.ui.lineEdit_13.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_14.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_15.text().replace(",", ".")) * self.ui.cdf.currentData()
+                d = float(self.ui.lineEdit_16.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.tree_side_inscribed_circle(a, b, c, d)
+            elif self.typeR == "6":
+                a = float(self.ui.lineEdit_17.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_18.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_19.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.one_side_two_angle(a, b, c)
+
+        except ValueError:
+            print("error")
+            return
+
+        self.ui.lineEdit_26.setText(str(res))
+        self.movie.start()
+        print(res)
+
+    def calculate_trapeze(self):
+        try:
+            if self.typeR == "1":
+                a = float(self.ui.lineEdit.text().replace(",", ".")) * self.ui.comboBox.currentData()
+                b = float(self.ui.lineEdit_2.text().replace(",", ".")) * self.ui.comboBox_2.currentData()
+                c = float(self.ui.lineEdit_3.text().replace(",", ".")) * self.ui.comboBox_3.currentData()
+                res = self.model.triangle.geron(a, b, c)
+            elif self.typeR == "2":
+                a = float(self.ui.lineEdit_4.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_5.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_6.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.two_side_one_angle(a, b, c)
+            elif self.typeR == "3":
+                a = float(self.ui.lineEdit_7.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_8.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.side_height(a, b)
+            elif self.typeR == "4":
+                a = float(self.ui.lineEdit_9.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_10.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_11.text().replace(",", ".")) * self.ui.cdf.currentData()
+                d = float(self.ui.lineEdit_12.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.thre_side_described_circle(a, b, c, d)
+            elif self.typeR == "5":
+                a = float(self.ui.lineEdit_13.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_14.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_15.text().replace(",", ".")) * self.ui.cdf.currentData()
+                d = float(self.ui.lineEdit_16.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.tree_side_inscribed_circle(a, b, c, d)
+            elif self.typeR == "6":
+                a = float(self.ui.lineEdit_17.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_18.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_19.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.one_side_two_angle(a, b, c)
+
+        except ValueError:
+            print("error")
+            return
+
+        self.ui.lineEdit_26.setText(str(res))
+        self.movie.start()
+        print(res)
+
+    def calculate_circle(self):
+        try:
+            if self.typeR == "1":
+                a = float(self.ui.lineEdit.text().replace(",", ".")) * self.ui.comboBox.currentData()
+                b = float(self.ui.lineEdit_2.text().replace(",", ".")) * self.ui.comboBox_2.currentData()
+                c = float(self.ui.lineEdit_3.text().replace(",", ".")) * self.ui.comboBox_3.currentData()
+                res = self.model.triangle.geron(a, b, c)
+            elif self.typeR == "2":
+                a = float(self.ui.lineEdit_4.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_5.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_6.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.two_side_one_angle(a, b, c)
+            elif self.typeR == "3":
+                a = float(self.ui.lineEdit_7.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_8.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.side_height(a, b)
+            elif self.typeR == "4":
+                a = float(self.ui.lineEdit_9.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_10.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_11.text().replace(",", ".")) * self.ui.cdf.currentData()
+                d = float(self.ui.lineEdit_12.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.thre_side_described_circle(a, b, c, d)
+            elif self.typeR == "5":
+                a = float(self.ui.lineEdit_13.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_14.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_15.text().replace(",", ".")) * self.ui.cdf.currentData()
+                d = float(self.ui.lineEdit_16.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.tree_side_inscribed_circle(a, b, c, d)
+            elif self.typeR == "6":
+                a = float(self.ui.lineEdit_17.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_18.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_19.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.one_side_two_angle(a, b, c)
+
+        except ValueError:
+            print("error")
+            return
+
+        self.ui.lineEdit_26.setText(str(res))
+        self.movie.start()
+        print(res)
+
+    def calculate_elips(self):
+        try:
+            if self.typeR == "1":
+                a = float(self.ui.lineEdit.text().replace(",", ".")) * self.ui.comboBox.currentData()
+                b = float(self.ui.lineEdit_2.text().replace(",", ".")) * self.ui.comboBox_2.currentData()
+                c = float(self.ui.lineEdit_3.text().replace(",", ".")) * self.ui.comboBox_3.currentData()
+                res = self.model.triangle.geron(a, b, c)
+            elif self.typeR == "2":
+                a = float(self.ui.lineEdit_4.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_5.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_6.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.two_side_one_angle(a, b, c)
+            elif self.typeR == "3":
+                a = float(self.ui.lineEdit_7.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_8.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.side_height(a, b)
+            elif self.typeR == "4":
+                a = float(self.ui.lineEdit_9.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_10.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_11.text().replace(",", ".")) * self.ui.cdf.currentData()
+                d = float(self.ui.lineEdit_12.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.thre_side_described_circle(a, b, c, d)
+            elif self.typeR == "5":
+                a = float(self.ui.lineEdit_13.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_14.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_15.text().replace(",", ".")) * self.ui.cdf.currentData()
+                d = float(self.ui.lineEdit_16.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.tree_side_inscribed_circle(a, b, c, d)
+            elif self.typeR == "6":
+                a = float(self.ui.lineEdit_17.text().replace(",", ".")) * self.ui.cdf.currentData()
+                b = float(self.ui.lineEdit_18.text().replace(",", ".")) * self.ui.cdf.currentData()
+                c = float(self.ui.lineEdit_19.text().replace(",", ".")) * self.ui.cdf.currentData()
+                res = self.model.triangle.one_side_two_angle(a, b, c)
+
+        except ValueError:
+            print("error")
+            return
+
+        self.ui.lineEdit_26.setText(str(res))
+        self.movie.start()
+        print(res)
+
+
+
+
     def triangle_swich_menus(self, button):
         self.movie.stop()
         matchicg_dict = {"1":1, "2":0, "3":2, "4":3, "5":4, "6":5}
-        path_dict = {"1":"./media/phigures/triangle/Герон.jpg", "2":"./media/phigures/triangle/довжини двох сторін і кут між ними.png", "3":"./media/phigures/triangle/довжина сторони  і опущена висота.png", "4":"./media/phigures/triangle/довжина трьох сторін  і радіус вписаного кола.png", "5":"./media/phigures/triangle/довжина трьох сторін  і радіус описаного кола.png", "6":"./media/phigures/triangle/довжина одного боку  і двох кутыв.png"}
+        path_dict = {"1":"./media/phigures/triangle/Герон.jpg",
+                     "2":"./media/phigures/triangle/довжини двох сторін і кут між ними.png",
+                     "3":"./media/phigures/triangle/довжина сторони  і опущена висота.png",
+                     "4":"./media/phigures/triangle/довжина трьох сторін  і радіус вписаного кола.png",
+                     "5":"./media/phigures/triangle/довжина трьох сторін  і радіус описаного кола.png",
+                     "6":"./media/phigures/triangle/довжина одного боку  і двох кутыв.png"}
         self.typeR = button.text()[0]
         self.ui.stackedWidget.setCurrentIndex(matchicg_dict[self.typeR])
         pixmap = QPixmap(path_dict[self.typeR])
         self.ui.label_3.setPixmap(pixmap)
+
+    def quadrangle_swich_menus(self, button):
+        self.movie.stop()
+        matchicg_dict = {"1":1, "2":0, "3":2, "4":3, "5":4, "6":5}
+        path_dict = {"1":"./media/phigures/triangle/Герон.jpg",
+                     "2":"./media/phigures/triangle/довжини двох сторін і кут між ними.png",
+                     "3":"./media/phigures/triangle/довжина сторони  і опущена висота.png",
+                     "4":"./media/phigures/triangle/довжина трьох сторін  і радіус вписаного кола.png",
+                     "5":"./media/phigures/triangle/довжина трьох сторін  і радіус описаного кола.png",
+                     "6":"./media/phigures/triangle/довжина одного боку  і двох кутыв.png"}
+        self.typeR = button.text()[0]
+        self.ui.stackedWidget.setCurrentIndex(matchicg_dict[self.typeR])
+        pixmap = QPixmap(path_dict[self.typeR])
+        self.ui.label_3.setPixmap(pixmap)
+
+    def square_swich_menus(self, button):
+        self.movie.stop()
+        matchicg_dict = {"1":1, "2":0, "3":2, "4":3, "5":4, "6":5}
+        path_dict = {"1":"./media/phigures/triangle/Герон.jpg",
+                     "2":"./media/phigures/triangle/довжини двох сторін і кут між ними.png",
+                     "3":"./media/phigures/triangle/довжина сторони  і опущена висота.png",
+                     "4":"./media/phigures/triangle/довжина трьох сторін  і радіус вписаного кола.png",
+                     "5":"./media/phigures/triangle/довжина трьох сторін  і радіус описаного кола.png",
+                     "6":"./media/phigures/triangle/довжина одного боку  і двох кутыв.png"}
+        self.typeR = button.text()[0]
+        self.ui.stackedWidget.setCurrentIndex(matchicg_dict[self.typeR])
+        pixmap = QPixmap(path_dict[self.typeR])
+        self.ui.label_3.setPixmap(pixmap)
+
+    def rectangle_swich_menus(self, button):
+        self.movie.stop()
+        matchicg_dict = {"1":1, "2":0, "3":2, "4":3, "5":4, "6":5}
+        path_dict = {"1":"./media/phigures/triangle/Герон.jpg",
+                     "2":"./media/phigures/triangle/довжини двох сторін і кут між ними.png",
+                     "3":"./media/phigures/triangle/довжина сторони  і опущена висота.png",
+                     "4":"./media/phigures/triangle/довжина трьох сторін  і радіус вписаного кола.png",
+                     "5":"./media/phigures/triangle/довжина трьох сторін  і радіус описаного кола.png",
+                     "6":"./media/phigures/triangle/довжина одного боку  і двох кутыв.png"}
+        self.typeR = button.text()[0]
+        self.ui.stackedWidget.setCurrentIndex(matchicg_dict[self.typeR])
+        pixmap = QPixmap(path_dict[self.typeR])
+        self.ui.label_3.setPixmap(pixmap)
+
+    def paralelogram_swich_menus(self, button):
+        self.movie.stop()
+        matchicg_dict = {"1":1, "2":0, "3":2, "4":3, "5":4, "6":5}
+        path_dict = {"1":"./media/phigures/triangle/Герон.jpg",
+                     "2":"./media/phigures/triangle/довжини двох сторін і кут між ними.png",
+                     "3":"./media/phigures/triangle/довжина сторони  і опущена висота.png",
+                     "4":"./media/phigures/triangle/довжина трьох сторін  і радіус вписаного кола.png",
+                     "5":"./media/phigures/triangle/довжина трьох сторін  і радіус описаного кола.png",
+                     "6":"./media/phigures/triangle/довжина одного боку  і двох кутыв.png"}
+        self.typeR = button.text()[0]
+        self.ui.stackedWidget.setCurrentIndex(matchicg_dict[self.typeR])
+        pixmap = QPixmap(path_dict[self.typeR])
+        self.ui.label_3.setPixmap(pixmap)
+
+    def diamond_swich_menus(self, button):
+        self.movie.stop()
+        matchicg_dict = {"1": 1, "2": 0, "3": 2, "4": 3, "5": 4, "6": 5}
+        path_dict = {"1": "./media/phigures/triangle/Герон.jpg",
+                     "2": "./media/phigures/triangle/довжини двох сторін і кут між ними.png",
+                     "3": "./media/phigures/triangle/довжина сторони  і опущена висота.png",
+                     "4": "./media/phigures/triangle/довжина трьох сторін  і радіус вписаного кола.png",
+                     "5": "./media/phigures/triangle/довжина трьох сторін  і радіус описаного кола.png",
+                     "6": "./media/phigures/triangle/довжина одного боку  і двох кутыв.png"}
+        self.typeR = button.text()[0]
+        self.ui.stackedWidget.setCurrentIndex(matchicg_dict[self.typeR])
+        pixmap = QPixmap(path_dict[self.typeR])
+        self.ui.label_3.setPixmap(pixmap)
+
+    def trapeze_swich_menus(self, button):
+        self.movie.stop()
+        matchicg_dict = {"1": 1, "2": 0, "3": 2, "4": 3, "5": 4, "6": 5}
+        path_dict = {"1": "./media/phigures/triangle/Герон.jpg",
+                     "2": "./media/phigures/triangle/довжини двох сторін і кут між ними.png",
+                     "3": "./media/phigures/triangle/довжина сторони  і опущена висота.png",
+                     "4": "./media/phigures/triangle/довжина трьох сторін  і радіус вписаного кола.png",
+                     "5": "./media/phigures/triangle/довжина трьох сторін  і радіус описаного кола.png",
+                     "6": "./media/phigures/triangle/довжина одного боку  і двох кутыв.png"}
+        self.typeR = button.text()[0]
+        self.ui.stackedWidget.setCurrentIndex(matchicg_dict[self.typeR])
+        pixmap = QPixmap(path_dict[self.typeR])
+        self.ui.label_3.setPixmap(pixmap)
+
+    def circle_swich_menus(self, button):
+        self.movie.stop()
+        matchicg_dict = {"1": 1, "2": 0, "3": 2, "4": 3, "5": 4, "6": 5}
+        path_dict = {"1": "./media/phigures/triangle/Герон.jpg",
+                     "2": "./media/phigures/triangle/довжини двох сторін і кут між ними.png",
+                     "3": "./media/phigures/triangle/довжина сторони  і опущена висота.png",
+                     "4": "./media/phigures/triangle/довжина трьох сторін  і радіус вписаного кола.png",
+                     "5": "./media/phigures/triangle/довжина трьох сторін  і радіус описаного кола.png",
+                     "6": "./media/phigures/triangle/довжина одного боку  і двох кутыв.png"}
+        self.typeR = button.text()[0]
+        self.ui.stackedWidget.setCurrentIndex(matchicg_dict[self.typeR])
+        pixmap = QPixmap(path_dict[self.typeR])
+        self.ui.label_3.setPixmap(pixmap)
+
+    def elipse_swich_menus(self, button):
+        self.movie.stop()
+        matchicg_dict = {"1": 1, "2": 0, "3": 2, "4": 3, "5": 4, "6": 5}
+        path_dict = {"1": "./media/phigures/triangle/Герон.jpg",
+                     "2": "./media/phigures/triangle/довжини двох сторін і кут між ними.png",
+                     "3": "./media/phigures/triangle/довжина сторони  і опущена висота.png",
+                     "4": "./media/phigures/triangle/довжина трьох сторін  і радіус вписаного кола.png",
+                     "5": "./media/phigures/triangle/довжина трьох сторін  і радіус описаного кола.png",
+                     "6": "./media/phigures/triangle/довжина одного боку  і двох кутыв.png"}
+        self.typeR = button.text()[0]
+        self.ui.stackedWidget.setCurrentIndex(matchicg_dict[self.typeR])
+        pixmap = QPixmap(path_dict[self.typeR])
+        self.ui.label_3.setPixmap(pixmap)
+
 
 if __name__ == '__main__':
     app = QApplication([])
